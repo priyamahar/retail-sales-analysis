@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <title> Retail Sales Management System</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+        .header{
+            background: #1f2937;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+        .header p {
+            margin-top: 8px;
+            color: #d1d5db;
+        }
+        .container {
+            width: 90%;
+            mx-width: 1100px;
+            margin: 35px auto;
+        }
+        .welcome {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1)
+            margin-bottom: 25px;
+        }
+        .welcome h2 {
+            margin-top: 0;
+            color: #1f2937;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .card h3 {
+            color: #374151;
+        }
+        .card p {
+            color: #6b7280;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #6b7280;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1> Retail Sales Management System</h1>
+        <p> Manage your retail business efficiently</p>
+    </div>
+    <div class="container">
+        <div class="welcome">
+            <h2>Welcome to the Dashboard</h2>
+            <p>
+                This system helps manage customers,products and Sales
+                information using a MYSQL database.
+            </p>
+        </div>
+        <div class="cards">
+            <a href="/customers" class="card">
+               <h3>👥 Customers</h3>
+               <h2>{{ total_customers }}</h2>
+               <p>View and manage customer records.</p>
+            </a>
+          
+            <a href="/products" class="card">
+               <h3>📦 Products</h3>
+               <h2>{{ total_products  }}</h2>
+               <p>View and manage product information.</p>
+            </a>
+           
+             <a href="/sales" class="card">
+                 <h3>🛒 Sales</h3>
+                 <h2>{{ total_sales }}</h2>
+                 <p>View and manage sales transactions.</p>
+             </a>
+             <a href="/reports" class="card">
+                <h3>💰 Total Sales Amount</h3>
+                <h2>{{ total_amount }}</h2>
+                <p>Total revenue from sales</p>
+             </a>
+           
+            <a href="/reports" class="card">
+                <h3>📊 Reports</h3>
+                <p>Analyze retail sales data.</p>
+            </a>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Retail Sales Management System | BCA Project</p>
+    </div>
+</body>
+</html>
